@@ -1,0 +1,129 @@
+/* Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* CSS Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* Root */
+:root {
+  /* FONTS */
+  --FF: 'Inter', sans-serif;
+  /* COLOR */
+  --BGCOLOR-GREEN: hsl(75, 94%, 57%);
+  --BGCOLOR-White: hsl(0, 0%, 100%);
+
+  --BGCOLOR-Grey700: hsl(0, 0%, 20%);
+  --BGCOLOR-Gre800: hsl(0, 4%, 10%);
+  --BGCOLOR-Grey900: hsl(0, 2%, 9%);
+  /* Margin */
+  --MARGIN-TOP: 1.5rem;
+}
+
+/* * */
+
+html {
+  font-family: var(--FF);
+  scroll-behavior: smooth;
+  background: var(--BGCOLOR-Grey900);
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* ** header and footer* */
+header,
+footer {
+  display: none;
+}
+/* container */
+.container {
+  background-color: var(--BGCOLOR-Grey700);
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1.2rem;
+  text-align: center;
+}
+/* hero design */
+.hero {
+  padding: 1.5rem;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.hero__main {
+  margin-top: var(--MARGIN-TOP);
+  object-fit: contain;
+}
+.hero__img {
+  border-radius: 50%;
+  height: 5rem;
+}
+.hero__details {
+  margin-top: var(--MARGIN-TOP);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.hero__name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--BGCOLOR-White);
+}
+.hero__address {
+  font-size: small;
+  font-weight: 600;
+  color: var(--BGCOLOR-GREEN);
+}
+.hero__job {
+  margin-top: var(--MARGIN-TOP);
+  font-size: small;
+  color: var(--BGCOLOR-White);
+}
+
+.hero__sociallinks {
+  margin-top: var(--MARGIN-TOP);
+}
+.hero__paltform {
+  /* outline: 1px solid red; */
+  color: var(--BGCOLOR-White);
+  background-color: hsla(0, 0%, 36%, 0.651);
+  font-size: small;
+  font-weight: 200;
+  margin-bottom: 0.8rem;
+  padding: 0.3rem;
+  width: 16rem;
+  height: 4.2vh;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.hero__paltform:hover {
+  background-color: var(--BGCOLOR-GREEN);
+  color: var(--BGCOLOR-Grey900);
+}
+
+@media screen and (min-width: 746px) {
+  .container {
+    transform: scale(1.2);
+  }
+  .hero {
+    max-height: fit-content;
+  }
+}
